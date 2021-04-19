@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" onclick="test();">开始计数</button>
+    <!-- <button type="button" onclick="stop();">停止</button> -->
+    <script>
+        // var i = 0;
+        // var i_interval;
+        // function test() {
+        //     i_interval = setInterval('clock()', 200);
+        // }
+        // function clock() {
+        //     console.log(i++);
+        // }
+        // function stop() {
+        //     clearInterval(i_interval);
+        // }
+        var i = 0;
+        function test() {
+            setTimeout('clock()', 1000);
+        }
+        function clock() {
+            console.log(i++);
+            // setTimeout('clock()', 1000);
+        }
+    </script>
+</body>
+
+</html>

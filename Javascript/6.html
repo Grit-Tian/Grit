@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list1">
+        <li>北京</li>
+        <li>上海</li>
+        <li>天津</li>
+    </ul>
+    <ul id="list2"></ul>
+    <script>
+        var list1=document.getElementById('list1');
+        var list2=document.getElementById('list2');
+        var item01=list1.firstElementChild;
+        //list2直接附加item01，北京将从list1移动到list2
+        //list2.appendChild(item01);
+        //先克隆在附加，则北京将保留在list1中，list2中将增加一项"北京"
+        var item02=item01.cloneNode(true);//可以试试将参数改为false，是什么效果
+        list2.appendChild(item02);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>模拟placeholder</title>
+</head>
+<body>
+    <input type="text" name="username" id="username" value="请输入用户名" style="color:#aaa;">
+    <button type="button" id="btn">发送</button>
+    <script>
+        window.onload=function(){
+            var txtUsername=document.getElementById('username');
+            txtUsername.onfocus=function(){
+                if (this.value=='请输入用户名') {
+                    this.value='';
+                    this.style.color='#333';
+                }
+                this.select();
+            }
+            txtUsername.onblur=function(){
+                if (this.value=='') {
+                    this.value='请输入用户名';
+                    this.style.color='#aaa';
+                }
+            }
+        }
+    </script>
+</body>
+</html>

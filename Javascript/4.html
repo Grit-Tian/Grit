@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+</head>
+
+<body>
+    <h1>用户注册</h1>
+    <form action="#" method="post" onsubmit="return check();" name="myform">
+        <p>
+            <label for="username">姓名：</label>
+            <input type="text" name="username" id="username" />
+        </p>
+        <p>
+            <label for="pwd">密码：</label>
+            <input type="password" name="pwd" id="pwd" />
+        </p>
+        <p>
+            <label for="repwd">确认密码：</label>
+            <input type="password" name="repwd" id="repwd" />
+        </p>
+        <p>
+            <label>性别：</label>
+            <label><input type="radio" name="sex" />男</label>
+            <label><input type="radio" name="sex" />女</label>
+        </p>
+        <p>
+            <label for="email">邮箱：</label>
+            <input type="email" name="email" id="email" />
+        </p>
+        <p>
+            <label for="idtype">身份：</label>
+            <select name="idtype" id="idtype">
+                <option value="student">学生</option>
+                <option value="teacher">老师</option>
+            </select>
+        </p>
+        <p>
+            <label for="intro">介绍</label>
+            <textarea name="intor" id="intro" cols="30" rows="10"></textarea>
+        </p>
+        <p>
+            <input type="submit" value="注册">
+            <input type="reset" value="重填">
+        </p>
+    </form>
+    <script>
+        function check() {
+            // 1
+            var username = myform.username.value;
+            var pwd = myform.pwd.value;
+            var repwd = myform.repwd.value;
+            var email = myform.email.value;
+            if (username.length == 0 || pwd.length == 0 || repwd.length == 0 || email.length == 0) {
+                alert('带星号的字段必须填写');
+                return false;
+            }
+            // 2
+            if (username.length < 3 || username.length > 12) {
+                alert('用户名必须大于3个字符，小于12个字符')
+                return false;
+            }
+            // 3
+            var char = "$*&#";
+            for (var i = 0; i < username.length; i++) {
+                if (char.indexOf(username[i]) > -1) {
+                    alert('用户名不能含有#,*,&,$符号');
+                    return false;
+                }
+            }
+            // 4
+            var reg1 = new RegExp(/^(?![^a-zA-Z]+$)(?!\D+$)/);
+            if (!reg1.test(pwd)) {
+                alert('密码必须包含字母和数字');
+                return false;
+            }
+            if (pwd != repwd) {
+                alert('确认密码与秘密不一致');
+                return false;
+            }
+            // 5
+            var apos = email.indexOf("@");
+            var dotpos = email.lastIndexOf(".");
+            if (apos < 1 || dotpos - apos < 2) {
+                alert('邮箱格式不正确');
+                return false;
+            }
+            var char1 = '163';
+            var char2 = email.slice(apos + 1, dotpos);
+            if (char1 != char2) {
+                alert('必须是163邮箱');
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script type="text/javascript" src="/Javascript/1.1.js"></script> -->
+    
+</head>
+<body>
+    <!-- <h1 style="font-size: 300px;">&#9760</h1> -->
+    <form action="" name="f1">
+        <button type="button" onclick="question()">出题</button>
+        <input type="text" class="text" name="num1" readonly> + <input type="text" class="text" name="num2" readonly>=<input type="text" class="text" name="result">
+        <button type="button" onclick="cal()" >计算</button>
+    </form>
+    <script>
+        function question(){
+            var n1,n2;
+            n1=Math.floor(Math.random()*100);
+            n2=Math.floor(Math.random()*100);
+            f1.num1.value=n1;
+            f1.num2.value=n2;
+            f1.result.value='';
+        }
+        function cal(){
+            var n1,n2,res;
+            n1=Number(f1.num1.value);
+            n2=Number(f1.num2.value);
+            res=n1+n2;
+            f1.result.value=res;
+            console.log(res);
+        }
+        // var d=20;
+        // result=d++ + ++d + d;
+        // console.log("result = "+result);
+        // console.log("\u2620");
+    </script>
+</body>
+</html>

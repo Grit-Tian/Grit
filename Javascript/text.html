@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>试卷</title>
+</head>
+<body>
+    <form action="test2.php" method="post">
+        <?php
+        $x=mt_rand(0,9);
+        $y=mt_rand(0,9);
+        $z=$x+$y;
+        $op=mt_rand(0,3);
+        ?>
+        <p>
+            <?=$x?> + <?=$y?> =
+            <?php
+            for ($i=0; $i < 4; $i++) { 
+            ?>
+            <label>
+                <input type="radio" name="Q" value="<?=$z+$i-$op?>"><?=$z+$i-$op?>
+            </label>
+            <?php
+            }
+            ?>
+        </p>
+        <input type="hidden" name="answer" value="<?=$z?>">
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>

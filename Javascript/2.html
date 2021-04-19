@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="vsyyds" class="" name="f1" onsubmit="return check()">
+        <p>
+            <label for="usename">用户名</label>
+            <input type="text" name="usename">
+        </p>
+        <p><button type="submit">测试</button></p>
+    </form>
+    <script>
+
+        function check(){
+            var em;
+            em = f1.usename.value;           
+            //     if(em.length==0){
+            //     alert("用户名不能为空！");
+            //     return false;
+            // }
+            // else{
+            //     return true;
+            // }
+            var char="0123456789";
+            for(var i=0;i<em.length;i++){
+                if(char.indexOf(em[i])<0){
+                    alert("输入必须全为数字");
+                    return false;
+                }
+            }
+            return true;
+
+            // n = em.lastIndexOf('@');
+            // if (m == -1 || m != n) {
+            //     alert('只能有一个@字符');
+
+            // }
+            // console.log(em.indexOf('@'));
+
+            // for (i = 0; i < em.length; i++) {
+            //     if (em[i] == "@") {
+            //         j++;
+            //     }
+            // }
+            // alert("该邮箱无效（不存在@字符）");
+
+        }
+    </script>
+</body>
+
+</html>
