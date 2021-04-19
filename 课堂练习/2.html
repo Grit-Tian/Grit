@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        body{
+            padding: 20px;
+            overflow: hidden;
+        }
+        li{
+            list-style: none;
+            float:left;
+        }
+        a{     
+            text-decoration: none;
+            display: block;
+            background-color: rgb(83, 123, 232);
+            text-align: center;
+            padding: 10px 20px;
+            border-right: 1px solid rgb(88, 165, 254);
+            color: #fff;
+        }
+        ul{
+            display: none;
+        }
+        .l1,.l2,.l3{
+            display: block;
+            float: none;
+        }
+        a:hover{
+            background-color: rgb(11, 198, 204);
+            color:rgb(73, 122, 199)
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <li><a href="#">首页</a>
+           <ul>
+               <li class="l1"><a href="#">高层动态</a></li>
+               <li class="l2"><a href="#">国内新闻</a></li>
+               <li class="l3"><a href="#">海外新闻</a></li>
+           </ul>
+        </li>
+        <li><a href="#">新闻资讯</a></li>
+        <li><a href="#">政策环境</a></li>
+        <li><a href="#">五通发展</a></li>
+    </div>
+</body>
+</html>

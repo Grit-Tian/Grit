@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>实例</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            background-color: #888;
+        }
+        .box{
+            width: 520px;
+            /*height: 310px;*/
+            background-color: #fff;
+            position: absolute;
+            left: 50%;top: 50%;
+            margin-top: -155px;
+            margin-left: -260px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+            padding: 30px 0 50px;
+        }
+        .close{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('/img/msg_close.png') no-repeat;
+            right: 6px;
+            top: 6px;
+        }
+        .logo{
+            text-align: center;
+        }
+        .info{
+            text-align: center;
+            color: #666;
+            position: relative;
+            width: 286px;
+            /*border:1px solid #f00;*/
+            margin: 30px auto 0;
+        }
+        .info span::before,.info span::after{
+                content:'';
+                width: 50px;
+                border-top: 1px solid #ccc;
+                position: absolute;
+                top:10px;
+        }
+        .info span::before{
+            left:0px;
+        }
+        .info span::after{
+            right:0px;
+        }
+        .buttons{
+            width: 336px;
+            overflow: hidden;
+            margin: 20px auto;
+        }
+        .button{
+            margin-right: 20px;
+            /*display: inline-block;*/
+            float: left;
+            width: 64px;
+            height: 64px;
+            background:url('/img/login_icons_small.svg') no-repeat;
+        }
+        .weibo:hover{
+            background-position: 0 -80px;
+        }
+        .qq{
+            background-position: -80px 0;
+        }
+        .qq:hover{
+            background-position: -80px -80px;
+        }
+        .weixin{
+            background-position: -320px 0;
+        }
+         .weixin:hover{
+            background-position: -320px -80px;
+        }
+        .douban{
+            background-position: -160px 0;
+        }
+        .douban:hover{
+            background-position: -160px -80px;
+        }
+        a{
+            color:#9E7E6B;
+            text-decoration: none;
+        }
+        p{
+            text-align: center;
+        }
+        .login{
+            position: absolute;
+            bottom: 8px;
+            right: 8px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <a class="close" href="#"></a>
+        <p class="logo">
+            <img src="/img/logo_2x.png" alt="花瓣网" width="106" height="36">
+        </p>
+        <p class="info">
+            <span>用第三方账号注册花瓣</span>
+        </p>
+        <p class="buttons">
+            <a href="#" class="button weibo"></a>
+            <a href="#" class="button qq"></a>
+            <a href="#" class="button weixin"></a>
+            <a href="#" class="button douban"></a>
+        </p>
+        <p class="phone">
+            <a href="#">使用手机号码注册</a>
+        </p>
+        <p class="login">
+            已有账号？<a href="#">登录到花瓣</a>
+        </p>
+    </div>
+</body>
+</html>

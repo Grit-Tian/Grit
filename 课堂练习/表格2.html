@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>表格练习</title>
+    <style>
+        table{
+            width: 600px;
+        }
+        caption{
+            color:#fff;
+            background-color: rgb(119, 119, 119);
+        }
+        table,th,td{
+            border-collapse: collapse;
+            border-color: rgb(154, 154, 154);
+            border: outset 4px ;
+        }
+        .odd{
+            background-color:rgb(204, 204, 204);
+        }
+        .even{
+            background-color: rgb(170, 170, 170);
+        }
+        td,tfoot{
+            text-align: center;
+        }
+        tr>td:nth-of-type(3),tr>td:nth-of-type(5){
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>Product List</caption>
+        <thead>
+            <tr>
+                <th>product</th>
+                <th>ID</th>
+                <th>Country</th>
+                <th>Price</th>
+                <th>Color</th>
+                <th>Weight</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="odd">
+                <th>Computer</th>
+                <td>C184645</td>
+                <td>China</td>
+                <td>$3200.00</td>
+                <td>Black</td>
+                <td>5.20kg</td>
+            </tr>
+            <tr class="even">
+                <th>TV</th>
+                <td>T965874</td>
+                <td>Germany</td>
+                <td>$299.95</td>
+                <td>White</td>
+                <td>15.20kg</td>
+            </tr>
+            <tr class="odd">
+                <th>Phone</th>
+                <td>P494783</td>
+                <td>France</td>
+                <td>$34.80</td>
+                <td>Green</td>
+                <td>0.90kg</td>
+            </tr>
+            <tr class="even">
+                <th>Recorder</th>
+                <td>R349546</td>
+                <td>China</td>
+                <td>$111.99</td>
+                <td>Sliver</td>
+                <td>0.30kg</td>
+            </tr>
+            <tr class="odd">
+                <th>Washer</th>
+                <td>W454783</td>
+                <td>Japan</td>
+                <td>$240.80</td>
+                <td>White</td>
+                <td>30.90kg</td>
+            </tr>
+            <tr class="even">
+                <th>Freezer</th>
+                <td>F783990</td>
+                <td>China</td>
+                <td>$191.68</td>
+                <td>Blue</td>
+                <td>32.80kg</td>
+            </tr>
+            <tfoot>
+                <tr>
+                    <th>Total</th>
+                    <td colspan="5">6 products</td>
+                </tr>
+            </tfoot>
+        </tbody>
+    </table>
+</body>
+</html>
